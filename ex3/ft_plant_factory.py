@@ -2,7 +2,7 @@ class Plant:
     def __init__(
         self,
         name: str,
-        height: float,
+        height: float | int,
         age_days: int
     ) -> None:
         self.name = name

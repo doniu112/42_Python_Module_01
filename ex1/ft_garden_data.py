@@ -1,10 +1,10 @@
 class Plant:
-    def __init__(self, name, height, age_days):
+    def __init__(self, name: str, height: float | int, age_days: int) -> None:
         self.name = name
         self.height = height
         self.age_days = age_days
 
-    def show(self):
+    def show(self) -> None:
         print(f"{self.name.capitalize()}: {self.height}cm "
               f"{self.age_days} days old")
 

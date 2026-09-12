@@ -52,12 +52,12 @@ if __name__ == "__main__":
     print("=== Garden Security System ===")
     print("Plant Created: ", end="")
     rose.show()
-
+    print()
     rose.set_height(20)
     rose.set_age(30)
-
+    print()
     rose.set_height(-20)
     rose.set_age(-20)
-
+    print()
     print(f"Current state: Rose: {rose.get_height()}cm, "
           f"{rose.get_age()} days old")

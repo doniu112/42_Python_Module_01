@@ -15,10 +15,10 @@ class Plant:
             f"{self._age_days} days old"
         )
 
-    def grow(self, grow_height = 0.8) -> None:
+    def grow(self, grow_height: float = 0.8) -> None:
         self._height += grow_height
 
-    def age(self, aging_days = 1) -> None:
+    def age(self, aging_days: int = 1) -> None:
         self._age_days += aging_days
 
     def set_height(self, new_height: float | int = 15) -> float | int:
@@ -45,6 +45,7 @@ class Plant:
 
     def get_age(self) -> int:
         return self._age_days
+
 
 class Flower(Plant):
     def __init__(self,
@@ -75,6 +76,7 @@ class Flower(Plant):
         else:
             print(f"{self._name.capitalize()} has not bloomed yet")
 
+
 class Tree(Plant):
     def __init__(self,
                  tree_name: str,
@@ -96,12 +98,15 @@ class Tree(Plant):
         else:
             print(f"[asking the {self._name} to produce shade]")
             self._shade = True
-            print(f"Tree {self._name.capitalize()} now produces a shade of {self._height}cm long and {self._trunk_diameter}cm wide.")
+            print(f"Tree {self._name.capitalize()} now produces "
+                  f"a shade of {self._height}cm long and "
+                  f"{self._trunk_diameter}cm wide.")
             return self._shade
 
     def show(self) -> None:
         Plant.show(self)
         print(f"Trunk diameter: {self._trunk_diameter}cm")
+
 
 class Vegetable(Plant):
     def __init__(self,

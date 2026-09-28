@@ -6,8 +6,10 @@ class Plant:
         age_days: int = 0
     ) -> None:
         self._name = name
-        self._height = self.set_height(height)
-        self._age_days = self.set_age(age_days)
+        self._height: float | int = 0.0
+        self._age_days: int = 0
+        self.set_height(height)
+        self.set_age(age_days)
 
     def show(self) -> None:
         print(
@@ -47,7 +49,7 @@ class Plant:
         return self._age_days
 
 
-if __name__ == "__main__":
+def main():
     rose = Plant("rose", 10.0, 20)
     print("=== Garden Security System ===")
     print("Plant Created: ", end="")
@@ -61,3 +63,7 @@ if __name__ == "__main__":
     print()
     print(f"Current state: Rose: {rose.get_height()}cm, "
           f"{rose.get_age()} days old")
+
+
+if __name__ == "__main__":
+    main()

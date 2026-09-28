@@ -136,7 +136,7 @@ class Vegetable(Plant):
             self._nutritional_value += 1
 
 
-if __name__ == "__main__":
+def main():
     print("=== Garden Plant Types ===")
 
     print("=== Flower ===")
@@ -158,3 +158,7 @@ if __name__ == "__main__":
     tomato.vegetable_grow(20)
     tomato.show()
     print("\n")
+
+
+if __name__ == "__main__":
+    main()

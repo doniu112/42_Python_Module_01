@@ -9,7 +9,7 @@ class Plant:
               f"{self.age_days} days old")
 
 
-if __name__ == '__main__':
+def main() -> None:
     rose = Plant("rose", 25, 30)
     sunflower = Plant("sunflower", 80, 45)
     cactus = Plant("cactus", 15, 120)
@@ -18,3 +18,7 @@ if __name__ == '__main__':
     rose.show()
     sunflower.show()
     cactus.show()
+
+
+if __name__ == '__main__':
+    main()

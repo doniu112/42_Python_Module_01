@@ -143,7 +143,7 @@ class Vegetable(Plant):
             self.grow(1)
 
 
-def main():
+def main() -> None:
     print("=== Garden Plant Types ===")
 
     print("=== Flower ===")

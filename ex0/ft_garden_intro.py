@@ -8,5 +8,9 @@ def ft_display(plant: str, height: float | int, age: int) -> None:
           f"\n{end_message}")
 
 
-if __name__ == "__main__":
+def main() -> None:
     ft_display("rose", 25, 30)
+
+
+if __name__ == "__main__":
+    main()

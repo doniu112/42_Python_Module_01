@@ -49,7 +49,7 @@ class Plant:
         return self._age_days
 
 
-def main():
+def main() -> None:
     rose = Plant("rose", 10.0, 20)
     print("=== Garden Security System ===")
     print("Plant Created: ", end="")

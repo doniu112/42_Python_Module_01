@@ -22,7 +22,7 @@ class Plant:
         self.age_days += 1
 
 
-if __name__ == "__main__":
+def main() -> None:
     rose = Plant("Rose", 25.0, 30)
     oak = Plant("Oak", 200.0, 365)
     cactus = Plant("Cactus", 5.0, 90)
@@ -45,3 +45,7 @@ if __name__ == "__main__":
 
     print("Created: ", end="")
     fern.show()
+
+
+if __name__ == "__main__":
+    main()

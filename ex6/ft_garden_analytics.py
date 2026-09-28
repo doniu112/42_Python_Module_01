@@ -28,7 +28,7 @@ class Plant:
         age_days: int
     ) -> None:
         self._name = name
-        self._height = float(height)
+        self._height = height
         self._age_days = age_days
         self._stats = Plant.Statistics()
 
@@ -116,7 +116,7 @@ class Tree(Plant):
         trunk_diameter: float | int = 5.0
     ) -> None:
         super().__init__(name, height, age_days)
-        self._trunk_diameter = float(trunk_diameter)
+        self._trunk_diameter = trunk_diameter
         self._tree_stats = Tree.TreeStatistics()
         self._stats = Tree.TreeStatistics()
 

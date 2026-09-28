@@ -131,7 +131,7 @@ class Vegetable(Plant):
     def vegetable_grow(self, days: int) -> None:
         print(f"[make {self._name} grow and age for {days} days]")
         for day in range(days):
-            Plant.age(self, day)
+            Plant.age(self)
             Plant.grow(self, 1)
             self._nutritional_value += 1
 

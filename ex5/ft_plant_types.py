@@ -128,12 +128,19 @@ class Vegetable(Plant):
         print(f"Harvest season: {self._harvest_season.capitalize()}")
         print(f"Nutritional value: {self._nutritional_value}")
 
+    def grow(self, grow_height: float = 0.8) -> None:
+        super().grow(grow_height)
+        self._nutritional_value += 0.5
+
+    def age(self, aging_days: int = 1) -> None:
+        super().age(aging_days)
+        self._nutritional_value += 0.5 * aging_days
+
     def vegetable_grow(self, days: int) -> None:
         print(f"[make {self._name} grow and age for {days} days]")
-        for day in range(days):
-            Plant.age(self)
-            Plant.grow(self, 1)
-            self._nutritional_value += 1
+        for _ in range(days):
+            self.age()
+            self.grow(1)
 
 
 def main():

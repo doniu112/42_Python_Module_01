@@ -2,12 +2,14 @@ class Plant:
     def __init__(
         self,
         name: str,
-        height: float | int,
-        age_days: int
+        height: float | int = 0,
+        age_days: int = 0
     ) -> None:
         self._name = name
-        self._height = height
-        self._age_days = age_days
+        self._height: float | int = 0.0
+        self._age_days: int = 0
+        self.set_height(height)
+        self.set_age(age_days)
 
     def show(self) -> None:
         print(

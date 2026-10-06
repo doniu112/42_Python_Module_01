@@ -50,6 +50,18 @@ class Plant:
         self._age_days += aging_days
         self._stats.add_age()
 
+    def set_height(self, new_height: float | int) -> None:
+        if new_height < 0:
+            print(f"{self._name}: Error, height can't be negative")
+            return
+        self._height = new_height
+
+    def set_age(self, new_age: int) -> None:
+        if new_age < 0:
+            print(f"{self._name}: Error, age can't be negative")
+            return
+        self._age_days = new_age
+
     @staticmethod
     def check_year_old(age_days: int) -> None:
         print(
